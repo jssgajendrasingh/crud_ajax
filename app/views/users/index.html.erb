@@ -1,0 +1,15 @@
+<b>Users</b>
+
+<ul id="users">
+<%= render @users %>
+</ul>
+
+<br>
+
+<%= form_with model: @user,url: users_create_path do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br>
+  <%= form.label :email %>
+  <%= form.text_field :email %><br>
+  <%= form.submit %>
+<% end %>
